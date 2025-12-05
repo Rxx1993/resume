@@ -137,42 +137,45 @@
     \begin{paracol}{2}
         % ----- STRENGTHS -----
         \cvsection{\large Strengths}
-            \cvtag{Modelling and Simulation}
-            \cvtag{Flight Dynamics and Control}
-            \cvtag{Control Theory}\\
-            \cvtag{\small Control Allocation}\\
+            \cvtag{Flight Physics \& Control}
+            \cvtag{Flight Modelling \& Simulation}
+            % \cvtag{Control Theory}
             \cvtag{MBSE}
+            % \cvtag{Control Allocation}
+            \cvtag{Certification}
+            
             % \cvtag{Safety Critical Development}\\
             % \cvtag{Object Oriented Programming}
             % \cvtag{\small Nonlinear System Trim Linearization}\\
             
             % \medskip
             
-            \cvtag{Flight Testing and Operation}
-            \cvtag{UAV Piloting}
+            % \cvtag{Flight Testing and Operation}
+            \cvtag{Flight Testing}
+            % \cvtag{UAV Piloting}
             
         % ----- STRENGTHS -----
         
         % ----- LEARNING -----
         \cvsection{\large Software Skills}
             \cvtag{MATLAB/Simulink}\\
-            \cvtag{\normalsize Simulink Model Advisor}
+            % \cvtag{\normalsize Simulink Model Advisor}
             \cvtag{\normalsize Control Design Toolbox}
             \cvtag{\normalsize Math Symbolic Toolbox}
             \cvtag{Git}
-            \cvtag{GitLab}
-            \cvtag{Polarion}
+            % \cvtag{GitLab}
+            % \cvtag{Polarion}
             \cvtag{C/C++}
-            \cvtag{Eclipse}
-            \cvtag{CMake}
-            \cvtag{Visual Studio Code}
-            \cvtag{Python}
-            \cvtag{Solidworks}
+            % \cvtag{Eclipse}
+            % \cvtag{CMake}
+            % \cvtag{Visual Studio Code}
+            % \cvtag{Python}
+            % \cvtag{Solidworks}
         % ----- LEARNING -----
         
         % ----- LANGUAGES -----
         \cvsection{\large Languages}
-            \cvlang{English}{\small Professional Working}\\
+            \cvlang{English}{\small Professional}\\
             % \divider
             \medskip
             
@@ -181,7 +184,7 @@
             % \divider
             
             
-            \cvlang{German}{\small Goethe-Zertif. B1}
+            \cvlang{German}{\small Goethe B1}
             \smallskip
             %% Yeah I didn't spend too much time making all the
             %% spacing consistent... sorry. Use \smallskip, \medskip,
@@ -226,65 +229,94 @@
         
         % use ONLY \newpage if you want to force a page break for
         % ONLY the current column
-        \newpage
+        % \newpage
         
         %% Switch to the right column. This will now automatically move to the second
         %% page if the content is too long.
         \switchcolumn
         
         % ----- Objective -----
-        \cvsection{Objective}
-            \begin{quote} \justifying %\normalsize
+        \cvsection{Summary}
+        
+            % Removing 'quote' restores normal text size and margins
+            \begin{tabular}{@{}ll}
+                \textbf{Motivation:} & Productize eVTOLs. \\[0.2em]
+                \textbf{Industry:}   & 10+ years on eVTOL FCS, 1 TC, 1000+h flight testing.\\[0.2em]
+                \textbf{Academy:}    & 10+ publications, 300+ citations.\\ % [0.2em]
+            \end{tabular}
+                    
+            % \begin{quote} \justifying %\normalsize
                 % Lilium:
                 % With years of experience in flight control system development in both industry and academy, I am motivated to look for challenging opportunities where both my mindset for innovation and sound skills for safety critical system development can contribute, to exploit the promising future of urban air mobility.
                 % APSIDE:
-                With years of experience in the field of flight dynamics modelling, control and simulation in both industry and academy, I am motivated to look for challenging opportunities where both my mindset for innovation and sound skills for safety critical system development can contribute, to exploit the promising future of aerospace and air mobility industry.
-            \end{quote}
+                % 10+ years experience in： flight dynamics， modelling, control and simulation. Motivated to look for challenging opportunities where both my mindset for innovation and sound skills for safety critical system development can contribute, to exploit the promising future of aerospace and air mobility industry.
+            %     Motivation: productize eVTOLs.\\
+            %     Industry:   10+ years eVTOL FCS, 1 TC, 1000+h flight testing.\\
+
+            % \end{quote}
         % ----- Objective -----
         
         % ----- EXPERIENCE -----
         \cvsection{Professional Experience}
-            \cvevent{Research Associate }{| Institute of Flight System Dynamics}{06.2016 -- Now}{Munich, Germany}
-            \begin{itemize} \justifying
-                \item Participate in flight control system development for UAV prototypes.
-                \item Lead of control allocation development for both general and safety critical systems.
-                \item Organize and participate flight tests for small UAVs and work as test pilots.
-                \item Support on building system modelling and  analysis tool chain.
+            \cvevent{Research Associate }{| Institute of Flight System Dynamics, TUM}{06.2016 -- Now}{Munich, Germany}
+            \begin{itemize}
+                \item Lead of control allocation algorithm.
+                \item Lead of control configuration optimization.
+                \item Flight control system development.
+                \item Flight dynamics modelling toolchain development.
+            \end{itemize}
+            \bigskip
+
+            \cvevent{Lead of Flight Control System}{| AutoFlight}{08.2023 -- 07.2024}{Shanghai, China}
+            \begin{itemize}
+                \item Lead of GNC development.
+                \item Lead of system architecturing.
+                \item Lead of FCS TC applications.
             \end{itemize}
             \bigskip
             
-            \cvevent{Intern Software Development}{| Phoenix-Wings GmbH}{06.2020 -- Now}{Ismaning, Germany}
+            \cvevent{Senior Flight Control Engineer}{| AutoFlight}{07.2021 -- 08.2023}{Shanghai, China}
             \begin{itemize}
-                \item Focus on building a linearization tool in C++ to linearize an eVTOL dynamic model.
-                \item Support in testing the software tool chains developed in the company including model-in-the-loop and software-in-the-loop simulation and ground control system.
-                \item Attend flight tests and support in-flight ground control software testing.
-                \item Support in preparing documents and communication with Chinese customers.
+                \item Lead of guidance and control law development.
+                \item Lead of flight dynamics modelling development.
+                \item System architecturing.
+                \item Certification tasks (requirement capture and validation).
+                \item Flight testing.
             \end{itemize}
             \bigskip
-            % \divider
+
+
+            \cvevent{Software Development}{| Phoenix-Wings GmbH}{06.2020 -- 07.2021}{Ismaning, Germany}
+            \begin{itemize}
+                \item Lead of linearization tool.
+                \item Simulation toolchains development.
+                \item Flight testing.
+                \item Project management.
+            \end{itemize}
+            \bigskip
+            \divider
             
             \cvevent{Flight Control Engineer }{| Autel Robotics Europe GmbH}{06.2016 -- 01.2020}{Ismaning, Germany}
             \begin{itemize}
-                \item Participate in development of flight control system for a 5kg tilt-rotor eVTOL UAV.
-                \item Focus on the attitude loop design and control allocation for the tilting mechanism.
-                \item Organize flight tests and pilot the aircraft with aid of autopilots.
-                \item Responsible for organizing administrative communication and reports to the Chinese headquarter of the project.
+                \item Flight control algorithm for tilt-rotor UAV (Dragonfish).
+                \item Attitude loop design and control allocation.
+                \item Flight testing.
                 % \item Provide both technical and administrative supports to other projects.
             \end{itemize}
         % ----- EXPERIENCE -----
         
         % ----- EDUCATION -----
         \cvsection{Education}
-            \cvevent{Doctoral Candidate }{| Technical University of Munich (TUM)}{06.2016 -- Now (Expected Grad.: 2022)}{Munich, Germany}
+            \cvevent{Doctoral Candidate }{ Technical University of Munich (TUM)}{11.2017 -- Now (Expected Grad.: 2026)}{Munich, Germany}
             \begin{itemize}
-                \item \textbf{Research Direction}: \small Redundant System Control Allocation Optimization \& Protection
+                \item \textbf{Research Direction}: \small eVTOL Control Authority and Allocation Optimization
             \end{itemize}
             % \smallskip
             % \divider
             
-            \cvevent{M.Sc. Aerospace Engineering }{| Nanyang Technological University (NTU)}{08.2013 -- 02.2016}{Singapore}
+            \cvevent{M.Sc. Aerospace Engineering }{ Nanyang Technological University (NTU)}{08.2013 -- 02.2016}{Singapore}
             \begin{itemize}
-                \item \textbf{CGPA}: 4.92 \small (CAP: 1.06) \normalsize  \hspace{1em} \textbf{Major Subjects}: Flight Dynamics and Control, Light Weight Structures
+                \item \textbf{CGPA}: 4.92 \small (CAP: 1.06) \normalsize  \hspace{1em} \textbf{Major Subjects}: Flight Control, Light Weight Structures
             \end{itemize}
             % \smallskip
             % \divider
@@ -296,7 +328,7 @@
             % \end{itemize}
             % \divider
             
-            \cvevent{B.Eng. Aircraft Design Engineering }{| Beijing Institute of Technology (BIT)}{08.2008 -- 07.2012}{Beijing, China}
+            \cvevent{B.Eng. Aircraft Design Engineering }{ Beijing Institute of Technology (BIT)}{08.2008 -- 07.2012}{Beijing, China}
             \begin{itemize}
                 \item \textbf{GPA}: 85/100 \hspace{5em} \textbf{Major Subjects}: Flight Mechanics, Aerodynamics
             \end{itemize}
@@ -322,15 +354,15 @@
         }
         
         \cvsection{Projects}
-            \cvevent{V280 - 280kg eVTOL with Hybrid Configuration }{| TUM-FSD}{02.2020 -- Now}{Industry Project}
+            \cvevent{V280 - 280kg eVTOL}{| TUM-FSD}{02.2020 -- Now}{Industry Project}
             \begin{itemize} \justifying
-                \item \textbf{Role}: Lead of control allocation development
+                \item \textbf{Role}: Lead of control allocation (CA) development
                 % \item Major Requirements:
                 % % \vspace{1mm}
                 % \begin{itemize}
                 % \setlength\itemsep{0.1ex}
-                \item \textbf{Main Contribution}: Develop the control allocation algorithm for the complete flight envelope (hover, transition and cruise flight). In addition to nominal operation, the algorithm can safely operate with a critical hover propeller failure given information from fault detection and monitoring scheme.
-                \item \textbf{Development}: Strictly under code-compliant guidelines specified by DO-331 MBD design process (standard libraries, Model Advisor checks, Simulink Test Harnesses, and guaranteed WCET on target platform); automatic tests by continuous integration at push time \& issue tracking with GitLab; requirements tracking in Polarion.
+                \item \textbf{Main Contribution}: Develop CA algorithms for hover, transition and cruise flight, for OEI fail-safe cases.
+                \item \textbf{Highlight}: Developed under code-compliant guidelines specified by the DO-331 MBD design process (standard libraries, Model Advisor, Simulink Test Harnesses, and guaranteed WCET on target platform).
                 % \item \textbf{Status}: The implementation is finished over the whole flight envelope and being verified in the hardware-in-the-loop environment.
                 % \item Additionally build an AMS opitmization framework to support system controllability analysis.
                 % \end{itemize}
@@ -338,9 +370,9 @@
             \bigskip
             % \divider
 
-            \cvevent{Extended F-16 Modelling and Control}{| TUM-FSD}{05.2015 -- 07.2017}{Research Project}
+            \cvevent{F-16 Modelling Extension and Control}{| TUM-FSD}{05.2015 -- 07.2017}{Research Project}
             \begin{itemize} \justifying
-                \item \textbf{Role}: Lead of simulation model and baseline control design
+                \item \textbf{Role}: Lead of simulation model and INDI baseline controller
                 \item \textbf{Main Contribution}: Derive \& build the simulation model and closed-loop framework. Verified the INDI concept and compared several different control allocation schemes.
                 \item \textbf{Objective}: The highly redundant and nonlinear model serves as a conceptualization platform before a strategy is utilized to industry projects.
                 \item \textbf{Development}: The closed-loop framework is setup in  MATLAB/Simulink with FlightGear visualization. Implementation details are found in Publications [1][3].
@@ -348,7 +380,7 @@
             \bigskip
             % \divider
 
-            \cvevent{Dragonfish - 5kg Tilt-rotor Transition UAV}{| Autel Robotics Europe GmbH}{06.2016 -- 01.2020}{Industry Project}
+            \cvevent{Dragonfish - 5kg Tilt-rotor UAV}{| Autel Robotics Europe GmbH}{06.2016 -- 01.2020}{Industry Project}
             \begin{itemize} \justifying
                 \item \textbf{Role}: Lead of control allocation development
                 \item \textbf{Main Contribution}: Developed the control allocation scheme for the entire envelope. Deeply involved in the autopilot design of attitude and velocity control, debugging and tuning the closed-loop behavior. The controller provides a smooth transition and unified behavior between hover and wingborne flight.
