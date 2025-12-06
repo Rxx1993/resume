@@ -97,7 +97,28 @@
 \renewcommand{\ratingmarker}{\faCircle}
 
 %% sample.bib contains your publications
-%% \addbibresource{sample.bib}
+\addbibresource{sample.bib}
+% \renewbibmacro{in:}{}
+
+%% Gemini (reformat bib section)
+\AtBeginBibliography{
+  \small                          % 1. Set font to small (or try \footnotesize)
+  \renewcommand{\itemmarker}{}    % 2. Remove the bullet point
+  \setlength{\biblabelsep}{0.5em} % 3. Reduce the gap between [1] and the text
+}
+
+% --- Highlight Name in Bibliography ---
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ test {\ifstrequal{\namepartfamily}{Zhang}}
+               and test {\ifstrequal{\namepartgiven}{Jiannan}} }
+    {\textbf{#1}}{#1}%
+}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ test {\ifstrequal{\namepartfamily}{Zhang}}
+               and test {\ifstrequal{\namepartgiven}{Jiannan}} }
+    {\textbf{#1}}{#1}%
+}
 
 \begin{document}
     \name{Zhang Jiannan}
@@ -411,7 +432,7 @@
         % ----- PROJECTS -----
         
         \cvsection{Research Projects}
-            \cvevent{Generalized Control Allocation Protection}{| TUM-FSD}{01.2025 -- 12.2025}{Research Project}
+            \cvevent{Generalized Control Allocation Optimization \& Protection}{| TUM-FSD}{01.2025 -- 12.2025}{Research Project}
             \begin{itemize} \justifying
                 \item \textbf{Role}: Lead of algorithm development
                 \item \textbf{Contribution}: An adaptive method which generalize p-norm optimization tagets. Two command protection methods to improve pseudinverse based methods. One first-author and two second-author journals published.
@@ -423,7 +444,8 @@
             \cvevent{eVTOL Control Configuration Optimization}{| TUM-FSD}{05.2020 -- 12.2024}{Research Project}
             \begin{itemize} \justifying
                 \item \textbf{Role}: Lead of algorithm design and SW implementation
-                \item \textbf{Contribution}: Developed a method to optimize eVTOL powered-lift rotor topology. The optimal configuration features sublime robustness against OEI scenario. Two first-author journals published.
+                \item \textbf{Contribution}: Developed a method to optimize eVTOL powered-lift rotor topology. The optimal configuration features sublime robustness against OEI scenario. Two first-author journals published. 
+                % \cite{zhang2024four}.
                 % \item \textbf{Objective}: The highly redundant and nonlinear model serves as a conceptualization platform before a strategy is utilized to industry projects.
                 % \item \textbf{Development}: The closed-loop framework is setup in  MATLAB/Simulink with FlightGear visualization. Implementation details are found in Publications [1][3].
             \end{itemize}
@@ -442,13 +464,16 @@
         
         % ----- PROJECTS -----
         \cvsection{Publications}
-        \begin{enumerate} \justifying \small 
-            \item \emph{Attainable Moment Set Optimization to Support Configuration Design: A Required Moment Set Based Approach}
-            \item \emph{Saturation Protection with Pseudo Control Hedging: A Control Allocation Perspective}
-            \item \emph{Control Allocation Framework with SVD-based Protection for a Tilt-rotor VTOL Transition Air Vehicle}
-            \item \emph{Modeling and Incremental Nonlinear Dynamic Inversion Control for a Highly Redundant Flight System}
-            \item \emph{Control Allocation Framework for a Tilt-rotor Vertical Take-off and Landing Transition Aircraft}
-        \end{enumerate}
+        \nocite{*} % The * means "include everything in the .bib file"
+        \printbibliography[heading=none]
+
+        % \begin{enumerate} \justifying \small 
+        %     \item \emph{Attainable Moment Set Optimization to Support Configuration Design: A Required Moment Set Based Approach}
+        %     \item \emph{Saturation Protection with Pseudo Control Hedging: A Control Allocation Perspective}
+        %     \item \emph{Control Allocation Framework with SVD-based Protection for a Tilt-rotor VTOL Transition Air Vehicle}
+        %     \item \emph{Modeling and Incremental Nonlinear Dynamic Inversion Control for a Highly Redundant Flight System}
+        %     \item \emph{Control Allocation Framework for a Tilt-rotor Vertical Take-off and Landing Transition Aircraft}
+        % \end{enumerate}
         
         
     \end{paracol}
