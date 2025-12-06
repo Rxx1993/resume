@@ -26,6 +26,16 @@
 
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 
+% --- Chinese Support ---
+\usepackage{xeCJK}
+% "Microsoft YaHei" is standard on Windows and looks good for resumes (Sans-serif)
+\setCJKmainfont[
+  BoldFont={Microsoft YaHei}, 
+  ItalicFont={Microsoft YaHei}
+]{Microsoft YaHei}
+
+%% GEMINI NOTE: should only use xelatex to compile
+
 %% AltaCV uses the fontawesome5 and academicons fonts
 %% and packages.
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
@@ -121,15 +131,15 @@
 }
 
 \begin{document}
-    \name{Zhang Jiannan}
-    \tagline{Flight Control Engineer \& PhD Candidate}
+    \name{张先生}
+    \tagline{飞控系统工程师}
     %% You can add multiple photos on the left or right
     \photoL{4cm}{JZhang}
     
     \personalinfo{
         \email{jiannan.zhang@tum.de}\smallskip
         \phone{+49-176-630-81506}
-        \location{Munich, Germany}\\
+        \location{德国 慕尼黑}\\
         \linkedin{jiannan-zhang}
         %\github{johnDoe}
         %\dev{johnDoe}
@@ -151,43 +161,43 @@
     % \AtBeginEnvironment{itemize}{\small}
     
     %% Set the left/right column width ratio to 6:4.
-    \columnratio{0.25}
+    \columnratio{0.27}
 
     % Start a 2-column paracol. Both the left and right columns will automatically
     % break across pages if things get too long.
     \begin{paracol}{2}
         % ----- STRENGTHS -----
-        \cvsection{\large Strengths}
-            \cvtag{Flight Control System}
-            \cvtag{Flight Physics Modelling}
-            \cvtag{MBSE}
-            \cvtag{Certification}
+        \cvsection{\large 核心优势}
+            \cvtag{飞控系统}\\
+            \cvtag{飞行物理与建模仿真}\\
+            \cvtag{基于模型的系统工程}\\
+            \cvtag{适航取证}\\
             % \medskip
-            \cvtag{Flight Testing}
+            \cvtag{飞行测试}
             
         % ----- STRENGTHS -----
         
         % ----- LEARNING -----
-        \cvsection{\large Software Skills}
+        \cvsection{\large 软件技能}
             \cvtag{MATLAB/Simulink}\\
-            \cvtag{\normalsize Control Design Toolbox}
-            \cvtag{\normalsize Math Symbolic Toolbox}
+            \cvtag{\normalsize Control Design Toolbox}\\
+            \cvtag{\normalsize Math Symbolic Toolbox}\\
             \cvtag{Git}
             \cvtag{C/C++}
         % ----- LEARNING -----
         
         % ----- LANGUAGES -----
-        \cvsection{\large Languages}
-            \cvlang{English}{\small Professional}\\
+        \cvsection{\large 语言能力}
+            \cvlang{英语}{\small 商务}\\
             % \divider
             \medskip
             
-            \cvlang{Chinese}{\small Native}\\
+            \cvlang{普通话}{\small 母语}\\
             \medskip
             % \divider
             
             
-            \cvlang{German}{\small Goethe B1}
+            \cvlang{德语}{\small 歌德B1}
             \smallskip
             %% Yeah I didn't spend too much time making all the
             %% spacing consistent... sorry. Use \smallskip, \medskip,
@@ -239,64 +249,64 @@
         \switchcolumn
         
         % ----- Objective -----
-        \cvsection{Summary}
+        \cvsection{个人简介}
         
             % Removing 'quote' restores normal text size and margins
             \begin{tabular}{@{}ll}
-                \textbf{Motivation:} & Productize eVTOLs. \\[0.2em]
-                \textbf{Industry:}   & 10+ years on eVTOL FCS, 1 TC, 1000+h flight testing.\\[0.2em]
-                \textbf{Academy:}    & 10+ publications, 300+ citations.\\ % [0.2em]
+                \textbf{个人愿景:} & 实现eVTOL产品化. \\[0.2em]
+                \textbf{工业经历:} & 10+ 年eVTOL飞控系统开发, 1张TC, 1000+小时调测经验.\\[0.2em]
+                \textbf{学术经历:} & 10+篇核心期刊, 300+次被引用.\\ % [0.2em]
             \end{tabular}
             
             % \end{quote}
         % ----- Objective -----
         
         % ----- EXPERIENCE -----
-        \cvsection{Professional Experience}
-            \cvevent{Research Associate }{| Institute of Flight System Dynamics, TUM}{06.2016 -- Now}{Munich, Germany}
+        \cvsection{工作经历}
+            \cvevent{科研助理}{| 慕尼黑工业大学}{06.2016 -- 至今}{德国慕尼黑}
             \begin{itemize}
-                \item Lead of control allocation algorithm.
-                \item Lead of control configuration optimization.
-                \item Flight control system development.
-                \item Flight dynamics modelling toolchain development.
+                \item 负责控制分配算法开发。
+                \item 负责控制构型优化设计。
+                \item 飞行控制系统开发。
+                \item 飞行动力学建模工具链开发。
             \end{itemize}
             % \smallskip
             \bigskip
 
-            \cvevent{Lead of Flight Control System }{| AutoFlight}{08.2023 -- 07.2024}{Shanghai, China}
+            \cvevent{飞控系统负责人 }{| 峰飞航空科技}{08.2023 -- 07.2024}{中国上海}
             \begin{itemize}
-                \item Lead of GNC function development.
-                \item Lead of system architecturing.
-                \item Lead of FCS TC applications.
+                \item 负责制导、导航与控制 (GNC) 功能开发。
+                \item 负责系统架构设计。
+                \item 负责飞控系统适航取证 (TC) 申请工作。
             \end{itemize}
             % \smallskip
             \bigskip
             
-            \cvevent{Senior Flight Control Engineer }{| AutoFlight}{07.2021 -- 08.2023}{Shanghai, China}
+            \cvevent{高级飞控工程师 }{| 峰飞航空科技}{07.2021 -- 08.2023}{中国上海}
             \begin{itemize}
-                \item Lead of guidance and control law development.
-                \item Lead of flight dynamics modelling development.
-                \item System architecturing.
-                \item Certification tasks (requirement capture and validation).
-                \item Flight testing.
+                \item 负责制导与控制律开发。
+                \item 负责飞行动力学建模开发。
+                \item 参与系统架构设计。
+                \item 参与适航认证任务（需求捕获与验证）。
+                \item 参与飞行测试。
             \end{itemize}
             % \smallskip
             \bigskip
             
-            \cvevent{Flight Control Engineer }{| Autel Robotics Europe GmbH}{06.2016 -- 01.2020}{Ismaning, Germany}
+            \cvevent{飞控工程师 }{| 道通智能航空（欧洲）}{06.2016 -- 01.2020}{德国 Ismaning}
             \begin{itemize}
-                \item Flight control algorithm for tilt-rotor UAV (Dragonfish).
-                \item Attitude loop design and control allocation.
-                \item Flight testing.
+                \item 参与倾转旋翼无人机 (龙鱼) 飞控算法开发。
+                \item 主导姿态环设计与控制分配。
+                \item 参与飞行测试。
             \end{itemize}
             \bigskip
 
-            \cvevent{Software Developer }{| Phoenix-Wings GmbH}{06.2020 -- 07.2021}{Ismaning, Germany}
+            \cvevent{软件开发工程师 }{| Phoenix-Wings GmbH}{06.2020 -- 07.2021}{德国 Ismaning}
             \begin{itemize}
-                \item Lead of trim and linearization tool.
-                \item Simulation toolchains development.
-                \item Flight testing.
-                \item Project management.
+                \item 负责配平与线性化工具开发。
+                \item 负责仿真工具链开发。
+                \item 参与飞行测试。
+                \item 协助项目管理。
             \end{itemize}
             % \bigskip
             % \divider
@@ -309,17 +319,17 @@
     \newgeometry{left=2.5cm, right=2.5cm, top=2cm, bottom=2cm}
 
         % ----- EDUCATION -----
-        \cvsection{Education}
-            \cvevent{Doctoral Candidate }{ Technical University of Munich (TUM)}{11.2017 -- Now (Expected Grad.: 2026)}{Munich, Germany}
+        \cvsection{教育经历}
+            \cvevent{博士在读 }{| 慕尼黑工业大学 (TUM)}{11.2017 -- 2025}{德国慕尼黑}
             \begin{itemize}
-                \item \textbf{Research Direction}: \small eVTOL Control Authority and Allocation Optimization
+                \item \textbf{研究方向}: \small eVTOL 控制操纵性与分配优化
             \end{itemize}
             \bigskip
             % \divider
             
-            \cvevent{M.Sc. Aerospace Engineering }{ Nanyang Technological University (NTU)}{08.2013 -- 02.2016}{Singapore}
+            \cvevent{航空航天工程（硕士） }{| 南洋理工大学 (NTU)}{08.2013 -- 02.2016}{新加坡}
             \begin{itemize}
-                \item \textbf{CGPA}: 4.92 \small (CAP: 1.06) \normalsize  \hspace{1em} \textbf{Major Subjects}: Flight Control, Light Weight Structures
+                \item \textbf{CGPA}: 4.92 \small (CAP: 1.06) \normalsize  \hspace{1em} \textbf{主修课程}: 飞行控制，轻量化结构
             \end{itemize}
             \bigskip
             % \divider
@@ -331,9 +341,9 @@
             % \end{itemize}
             % \divider
             
-            \cvevent{B.Eng. Aircraft Design Engineering }{ Beijing Institute of Technology (BIT)}{08.2008 -- 07.2012}{Beijing, China}
+            \cvevent{飞行器设计与工程（本科） }{| 北京理工大学 (BIT)}{08.2008 -- 07.2012}{中国北京}
             \begin{itemize}
-                \item \textbf{GPA}: 85/100 \hspace{5em} \textbf{Major Subjects}: Flight Mechanics, Aerodynamics
+                \item \textbf{GPA}: 85/100 \hspace{5em} \textbf{主修课程}: 飞行力学，空气动力学
             \end{itemize}
         % ----- EDUCATION -----
         
@@ -355,76 +365,76 @@
           \medskip\normalsize%\faMapMarker
         }
         
-        \cvsection{Industry Projects}
-            \cvevent{CarryAll - 2000kg Lift-cruise eVTOL}{| Autoflight}{07.2021 -- 08.2024}{Industry Project}
+        \cvsection{工业界项目}
+            \cvevent{凯瑞欧 - 2000kg 复合翼eVTOL}{| 峰飞航空科技}{07.2021 -- 08.2024}{工业项目}
             \begin{itemize} \justifying
-                \item \textbf{Role}: Lead of modelling, guidance and control law
+                \item \textbf{角色}: 建模、制导与控制律负责人
                 % \item Major Requirements:
                 % % \vspace{1mm}
                 % \begin{itemize}
                 % \setlength\itemsep{0.1ex}
-                \item \textbf{Contribution}: Control law design, SW implementation, system architecturing and certification tasks (FHA, PSSA, etc.).
-                \item \textbf{Highlight}: First 2000kg eVTOL TC in the world.
+                \item \textbf{贡献}: 控制律设计，软件实现，系统架构及适航认证任务 (FHA, PSSA 等)。
+                \item \textbf{亮点}: 全球首个获得型号合格证 (TC) 的 2吨级 eVTOL。
                 % \end{itemize}
             \end{itemize}
             \bigskip
         
-            \cvevent{V280 - 280kg Lift-cruise eVTOL}{| TUM-FSD}{02.2020 -- 06.2021}{Industry Project}
+            \cvevent{V280 - 280kg 复合翼eVTOL}{| TUM-FSD}{02.2020 -- 06.2021}{工业项目}
             \begin{itemize} \justifying
-                \item \textbf{Role}: Lead of control allocation development
+                \item \textbf{角色}: 控制分配开发负责人
                 % \item Major Requirements:
                 % % \vspace{1mm}
                 % \begin{itemize}
                 % \setlength\itemsep{0.1ex}
-                \item \textbf{Contribution}: Control allocation algorithms for hover, transition and cruise flight, fail-safe proven for OEI.
-                \item \textbf{Highlight}: Developed under code-compliant guidelines specified by DO-331 (standard libraries, Model Advisor, Test Harnesses, etc.).
+                \item \textbf{贡献}: 开发悬停、过渡及巡航阶段的控制分配算法，并通过 OEI (单发失效) 故障安全验证。
+                \item \textbf{亮点}: 依据 DO-331 标准开发（使用标准库、模型顾问、测试框架等）。
             \end{itemize}
             \bigskip
             % \divider
             
-            \cvevent{Manta Ray - 30kg Lift-cruise eVTOL}{| Phoenix-Wings GmbH}{06.2020 -- 07.2021}{Industry Project}
+            \cvevent{魔鬼鱼 - 30kg 复合翼无人机}{| Phoenix-Wings GmbH}{06.2020 -- 07.2021}{工业项目}
             \begin{itemize} \justifying
-                \item \textbf{Role}: Lead of Trim and Linearization Tool in C++
-                \item \textbf{Contribution}: Implemented the trim and linearization tool in C++, and the MATLAB/Simulink interface for model verification and further design tasks.
+                \item \textbf{角色}: C++ 配平与线性化工具负责人
+                \item \textbf{贡献}: 使用 C++ 实现配平与线性化工具，以及用于模型验证和后续设计任务的 MATLAB/Simulink 接口。
             \end{itemize}
             \bigskip
 
-            \cvevent{Dragonfish - 7kg Tilt-rotor UAV}{| Autel Robotics Europe GmbH}{06.2016 -- 01.2020}{Industry Project}
+            \cvevent{龙鱼 - 7kg 倾转旋翼无人机}{| 道通智能航空（欧洲）}{06.2016 -- 01.2020}{工业项目}
             \begin{itemize} \justifying
-                \item \textbf{Role}: Lead of control allocation development
-                \item \textbf{Contribution}: Develope nonlieanr control allocation for the entire flight envelope. Support INDI attitude and velocity loop design. Two first-author papers published.
-                \item \textbf{Highlight}: Dragonfish as a product has already generated billions of sales revenues. 
+                \item \textbf{角色}: 控制分配开发负责人
+                \item \textbf{贡献}: 开发全包线非线性控制分配；支持 INDI 姿态与速度环设计；发表两篇一作论文。
+                \item \textbf{亮点}: 作为成熟产品已产生数十亿销售额。
             \end{itemize}
             
             % \divider
         % ----- PROJECTS -----
         
-        \cvsection{Research Projects}
-            \cvevent{Generalized Control Allocation Optimization \& Protection}{| TUM-FSD}{01.2025 -- 12.2025}{Research Project}
+        \cvsection{学术课题}
+            \cvevent{广义控制分配优化与保护}{| TUM-FSD}{01.2025 -- 12.2025}{科研项目}
             \begin{itemize} \justifying
-                \item \textbf{Role}: Lead of algorithm development
-                \item \textbf{Contribution}: An adaptive method which generalize p-norm optimization tagets. Two command protection methods to improve pseudinverse based methods. One first-author and two second-author journals published.
+                \item \textbf{角色}: 算法开发负责人
+                \item \textbf{贡献}: 提出一种广义p-范数优化目标的自适应方法；开发两种基于伪逆法的指令保护改进方法；发表一篇一作期刊和两篇二作期刊。
             \end{itemize}
             \bigskip
 
-            \cvevent{eVTOL Control Configuration Optimization}{| TUM-FSD}{05.2020 -- 12.2024}{Research Project}
+            \cvevent{eVTOL 控制构型优化}{| TUM-FSD}{05.2020 -- 12.2024}{科研项目}
             \begin{itemize} \justifying
-                \item \textbf{Role}: Lead of algorithm design and SW implementation
-                \item \textbf{Contribution}: Developed a method to optimize eVTOL powered-lift rotor topology. The optimal configuration features sublime robustness against OEI scenario. Two first-author journals published. 
+                \item \textbf{角色}: 算法设计与软件实现负责人
+                \item \textbf{贡献}: 开发了一种优化 eVTOL 动力升力旋翼拓扑的方法，最优构型在单发失效场景下具有极佳的鲁棒性；发表两篇一作期刊。
             \end{itemize}
             \bigskip
             % \divider 
 
-            \cvevent{F-16 Modelling Extension and Control Design}{| TUM-FSD}{05.2016 -- 01.2020}{Research Project}
+            \cvevent{F-16 建模扩展与控制设计}{| TUM-FSD}{05.2016 -- 01.2020}{科研项目}
             \begin{itemize} \justifying
-                \item \textbf{Role}: Lead of modelling and INDI baseline controller
-                \item \textbf{Contribution}: Developed the INDI closed-loop simulation framework and the nonlinear optimal control allocation and advanced hedging algorithm. Two first-author papers published.
+                \item \textbf{角色}: 建模与 INDI 基线控制器负责人
+                \item \textbf{贡献}: 开发 INDI 闭环仿真框架，以及非线性最优控制分配和先进避障算法；发表两篇一作论文。
             \end{itemize}
             \bigskip
             % \divider    
         
         % ----- PROJECTS -----
-        \cvsection{Publications}
+        \cvsection{学术成果}
         \nocite{*} % The * means "include everything in the .bib file"
         \printbibliography[heading=none]
 

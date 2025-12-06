@@ -8,3 +8,10 @@
 /main.out
 /main.run.xml
 /main.synctex.gz.sum.synctex
+/*.aux
+/*.blg
+/*.log
+/*.out
+/*.run.xml
+/*.synctex(busy)
+/main_cn-blx.bib
