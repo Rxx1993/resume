@@ -1,0 +1,67 @@
+{
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=build",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=build",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "build/%DOCFILE%"
+            ],
+            "env": {
+                "BIBINPUTS": "build;.;"
+            }
+        },
+        {
+            "name": "copyPdf",
+            "command": "powershell",
+            "args": [
+                "-Command", 
+                "Copy-Item -Path '%DIR%/build/%DOCFILE%.pdf' -Destination '%DIR%/%DOCFILE%.pdf' -Force"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex -> bibtex -> xelatex*2 -> copy",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex",
+                "copyPdf"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2 -> copy",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex",
+                "copyPdf"
+            ]
+        }
+    ]
+}
